@@ -1,5 +1,5 @@
 import React from 'react';
-import Workouts from "./components/workouts";
+import Workouts from "./components/Workouts";
 
 function App() {
     return (
