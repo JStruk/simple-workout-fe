@@ -3,9 +3,7 @@ import Workouts from "./components/Workouts";
 
 function App() {
     return (
-        <div className="ml-2">
-            <Workouts />
-        </div>
+        <Workouts/>
     );
 }
 

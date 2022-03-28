@@ -1,5 +1,13 @@
+import { Exercise } from "./Exercise";
+import { Workout } from "./Workout";
+
 export type ScheduledWorkout = {
     '_id': number
-    Title: string
-    Date: string
+    title: string
+    date: string
+}
+
+export interface ScheduledWorkoutPayload {
+    workout: Workout,
+    exercises: Array<Exercise>
 }
