@@ -6,6 +6,7 @@ import BottomBar from "./BottomBar";
 import TopBar from "./TopBar";
 import { ScheduledWorkoutPayload } from "../types/ScheduledWorkout";
 import { Workout } from "../types/Workout";
+import Progress from "./Progress";
 
 export const ExerciseNumberContext = createContext<[number, Dispatch<SetStateAction<number>>, number]>([0, () => null, 0])
 
@@ -35,6 +36,10 @@ function Workouts(): JSX.Element {
                 index={exerciseIndex}
                 total={exercises.length}
             />}
+
+            <hr/>
+
+            <Progress />
 
             <ExerciseNumberContext.Provider value={[exerciseIndex, setExerciseIndex, exercises.length]}>
                 <BottomBar/>
