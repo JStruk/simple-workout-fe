@@ -1,5 +1,5 @@
 export type Exercise = {
-    ID: number
+    _id: number
     title: string
     recommended_sets: number
     recommended_reps: string
