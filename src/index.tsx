@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement('#root');
 
 // import { config } from 'dotenv'
 // config()

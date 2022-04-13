@@ -3,13 +3,18 @@ import { UseFormRegister } from "react-hook-form/dist/types/form";
 
 interface SetInputProps {
     register: UseFormRegister<any>
+    watch: any
     field: any
     errors: any
 }
 
-const SetInput = ({ register, field, errors }: SetInputProps): JSX.Element => {
+const SetInput = ({ register, field, errors, watch }: SetInputProps): JSX.Element => {
     const repsInputName = `${field.id}.reps`;
     const weightInputName = `${field.id}.weight`;
+
+    watch(repsInputName)
+    watch(weightInputName)
+
     return (
         <>
             <div className="p-2 flex max-w-screen">

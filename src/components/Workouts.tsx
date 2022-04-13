@@ -29,23 +29,23 @@ function Workouts(): JSX.Element {
 
     return (
         <div className="flex flex-col">
-            {workout && <TopBar workout={workout}/>}
-
-            {exercises.length > 0 &&
-            <>
-                <ExerciseDisplay
-                    exercise={exercises[exerciseIndex]}
-                    index={exerciseIndex}
-                    total={exercises.length}
-                />
-
-                <hr/>
-
-                <Progress exercise={exercises[exerciseIndex]}/>
-            </>
-            }
-
             <ExerciseNumberContext.Provider value={[exerciseIndex, setExerciseIndex, exercises.length]}>
+                {workout && <TopBar workout={workout}/>}
+
+                {exercises.length > 0 &&
+                <>
+                    <ExerciseDisplay
+                        exercise={exercises[exerciseIndex]}
+                        index={exerciseIndex}
+                        total={exercises.length}
+                    />
+
+                    <hr/>
+
+                    <Progress exercise={exercises[exerciseIndex]}/>
+                </>
+                }
+
                 <BottomBar/>
             </ExerciseNumberContext.Provider>
         </div>
